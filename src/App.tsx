@@ -9,16 +9,20 @@ function App() {
     //обязана вернуть JSX
     return (
         <div className="App">
-            <PageTitle title='This is App component'/>
-            <Rating value={3}/>
-            <Rating value={4}/>
-            <Accordion title='Menu'/>
-            <Accordion title='Contacts'/>
+            {/*<PageTitle title='This is App component'/>*/}
+            {/*<Rating value={3}/>
+            <Rating value={4}/>*/}
+            <Accordion title='Menu' collapsed={true}/>
+            <Accordion title='Contacts' collapsed={false}/>
         </div>
     );
 }
 
-function PageTitle(props: any) {
+type PageTitlePropsType = {
+    title: string
+}
+
+function PageTitle(props: PageTitlePropsType) {
     console.log('PageTitle rendering')
     return (
         <h1>
