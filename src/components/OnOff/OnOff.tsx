@@ -5,6 +5,8 @@ type OnOffPropsType = {
 }
 
 export function OnOff(props: OnOffPropsType) {
+    console.log('OnOff rendering')
+
     return (
         <div className={'container'}>
             <div className={props.isOn ? 'switcher' + ' ' + 'on' : 'switcher'}>On</div>
