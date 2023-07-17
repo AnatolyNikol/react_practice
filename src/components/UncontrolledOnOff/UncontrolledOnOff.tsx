@@ -5,7 +5,10 @@ export function UncontrolledOnOff() {
     const [on, setOn] = useState(true); //hook
 
     const onClickHandler = () => {
-        setOn(!on)
+        setOn(true)
+    }
+    const offClickHandler = () => {
+        setOn(false)
     }
 
     const container = {
@@ -29,7 +32,7 @@ export function UncontrolledOnOff() {
     return (
         <div style={container}>
             <div style={on ? {...switcher, backgroundColor: 'green'} : switcher} onClick={onClickHandler}>On</div>
-            <div style={on ? switcher : {...switcher, backgroundColor: 'red'}} onClick={onClickHandler}>Off</div>
+            <div style={on ? switcher : {...switcher, backgroundColor: 'red'}} onClick={offClickHandler}>Off</div>
             <div style={on ? {...indicator, backgroundColor: 'green'} : {...indicator, backgroundColor: 'red'}}></div>
         </div>
     )
