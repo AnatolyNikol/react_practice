@@ -3,7 +3,13 @@ import React from "react";
 export type ValueType = 0 | 1 | 2 | 3 | 4 | 5
 
 type RatingPropsType = {
+    /**
+     * Rating star value
+     * */
     value: ValueType
+    /**
+     * Change rating star value
+     * */
     callback: (newValue: ValueType) => void
 }
 

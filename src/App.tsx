@@ -30,7 +30,7 @@ function App() {
             <Rating value={3}/>
             <Rating value={4}/>
             <Rating value={5}/>*/}
-            {/*<Rating value={value} callback={callback}/>*/}
+            <Rating value={value} callback={callback}/>
             {/*<UncontrolledRating/>*/}
             {/*<Accordion title='Menu' collapsed={collapsed} onClick={() => setCollapsed(!collapsed)}/>*/}
            {/* <UncontrolledAccordion title='Menu'/>
