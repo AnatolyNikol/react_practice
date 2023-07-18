@@ -1,7 +1,13 @@
 import './OnOff.css'
 
 type OnOffPropsType = {
+    /**
+     * Value of switcher
+     * */
     isOn: boolean
+    /**
+     * Value switching
+     * */
     onClick: (isOn: boolean) => void
 }
 
