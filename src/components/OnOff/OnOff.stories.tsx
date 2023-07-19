@@ -5,7 +5,7 @@ import {useState} from "react";
 import {OnOff} from "./OnOff";
 
 const meta: Meta<typeof OnOff> = {
-    title: 'Example/OnOff',
+    title: 'Components/OnOff',
     component: OnOff,
     // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
     tags: ['autodocs'],

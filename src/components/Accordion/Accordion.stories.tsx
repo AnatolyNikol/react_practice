@@ -5,7 +5,7 @@ import {useState} from "react";
 
 
 const meta: Meta<typeof Accordion> = {
-    title: 'Example/Accoridon',
+    title: 'Components/Accoridon',
     component: Accordion,
     tags: ['autodocs'],
 }
@@ -37,5 +37,5 @@ const ModeSwitching = () => {
 }
 
 export const SwitchingMode: Story = {
-    render: () => <ModeSwitching/>
+    render: () => <ModeSwitching />
 }
