@@ -1,0 +1,39 @@
+.selectContainer {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    /*min-width: 80px;*/
+    width: 80px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.selectContainer:focus {
+    border: 2px solid #0072E5;
+}
+
+.arrow {
+    border: .25em solid transparent;
+    border-top-color: black;
+    translate: 0 50%;
+}
+
+.optionsContainer {
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 5px;
+    min-width: 90px;
+    display: block;
+    top: 35px;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.options {
+    padding: 0 5px;
+}
+
+.optionHover {
+    background-color: rgba(25, 118, 210, 0.08)
+}
