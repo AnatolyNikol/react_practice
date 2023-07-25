@@ -13,25 +13,25 @@ import {ItemType, Select} from "./components/Select/Select";
 function App() {
     console.log('App rendered')
 
-    const items = [
-        {title: 'Valera', value: 1},
-        {title: 'Sasha', value: 2},
-        {title: 'Sveta', value: 3},
-    ]
+    // const items = [
+    //     {title: 'Valera', value: 1},
+    //     {title: 'Sasha', value: 2},
+    //     {title: 'Sveta', value: 3},
+    // ]
 
 
     // let [value, setValue] = useState<ValueType>(0)
     // let [collapsed, setCollapsed] = useState(false)
     // let [on, setOn] = useState(true)
-    let [selectValue, setSelectValue] = useState(2)
+    // let [selectValue, setSelectValue] = useState(2)
 
     // const callback = (newValue: ValueType) => {
     //     setValue(newValue)
     // }
 
-    const changeTitle = (newValue: any) => {
-        setSelectValue(newValue)
-    }
+    // const changeTitle = (newValue: any) => {
+    //     setSelectValue(newValue)
+    // }
 
     //обязана вернуть JSX
     return (
