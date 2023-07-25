@@ -7,7 +7,8 @@ import {useState} from "react";
 
 const meta: Meta<typeof Select> = {
     title: 'Components/Select',
-    component: Select
+    component: Select,
+    tags: ['autodocs']
 }
 
 export default meta;

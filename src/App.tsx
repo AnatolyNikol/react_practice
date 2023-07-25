@@ -38,10 +38,10 @@ function App() {
         <div className="App">
             {/*<PageTitle title='This is App component'/>*/}
 
-            <Select value={selectValue}
-                    items={items}
-                    onChange={changeTitle}
-            />
+            {/*<Select value={selectValue}*/}
+            {/*        items={items}*/}
+            {/*        onChange={changeTitle}*/}
+            {/*/>*/}
             {/*<Rating value={0}/>
             <Rating value={1}/>
             <Rating value={2}/>
@@ -51,8 +51,8 @@ function App() {
             {/*<Rating value={value} callback={callback}/>*/}
             {/*<UncontrolledRating/>*/}
             {/*<Accordion title='Menu' collapsed={collapsed} onChange={() => setCollapsed(!collapsed)}/>*/}
-           {/* <UncontrolledAccordion title='Menu'/>
-            <UncontrolledAccordion title='Users'/>*/}
+            <UncontrolledAccordion title='Menu'/>
+            <UncontrolledAccordion title='Users'/>
             {/*<OnOff isOn={on} onClick={setOn}/>*/}
             {/*<UncontrolledOnOff/>*/}
             {/*<OnOff />*/}
