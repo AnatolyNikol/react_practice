@@ -1,9 +1,9 @@
 import {Meta} from "@storybook/react";
-import React, {useMemo, useState} from "react";
+import React, {useCallback, useMemo, useState} from "react";
 
 
 const meta: Meta = {
-    title: 'Studying/useMemo'
+    title: 'Studying/useMemo useCallback'
 }
 
 export default meta;
@@ -88,3 +88,37 @@ const StateForHelpsToReactMemoExample = () => {
 export const HelpsToReactMemoExample = {
     render: () => <StateForHelpsToReactMemoExample/>
 }
+
+type InitialBooksPropsType = {
+    addBook: () => void
+}
+
+const InitialBooks = (props: InitialBooksPropsType) => {
+    console.log('Books')
+    return <div>
+        <button onClick={() => props.addBook()}>add book</button>
+    </div>
+}
+
+const Books = React.memo(InitialBooks);
+
+const StateForUseCallbackExample = () => {
+    console.log('UseCallback')
+    const [counter, setCounter] = useState(0);
+    const [books, setBooks] = useState(['Dimych', 'Valera', 'Artem']);
+
+    const addBook = useCallback(() => {
+        setBooks([...books, 'Sveta ' + new Date().getTime()])
+    }, [books])
+
+    return <>
+        <button onClick={() => setCounter(counter + 1)}>+</button>
+        {counter}
+        <Books addBook={addBook}/>
+    </>
+}
+
+export const UseCallbackExample = {
+    render: () => <StateForUseCallbackExample/>
+}
+
