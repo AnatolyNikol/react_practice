@@ -7,6 +7,7 @@ import {UncontrolledAccordion} from "./components/UncontrolledAccordion/Uncontro
 import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRating";
 import {UncontrolledOnOff} from "./components/UncontrolledOnOff/UncontrolledOnOff";
 import {ItemType, Select} from "./components/Select/Select";
+import {Clock} from "./components/Clock/Clock";
 
 
 //function declaration
@@ -36,6 +37,7 @@ function App() {
     //обязана вернуть JSX
     return (
         <div className="App">
+            <Clock/>
             {/*<PageTitle title='This is App component'/>*/}
 
             {/*<Select value={selectValue}*/}
@@ -51,8 +53,8 @@ function App() {
             {/*<Rating value={value} callback={callback}/>*/}
             {/*<UncontrolledRating/>*/}
             {/*<Accordion title='Menu' collapsed={collapsed} onChange={() => setCollapsed(!collapsed)}/>*/}
-            <UncontrolledAccordion title='Menu'/>
-            <UncontrolledAccordion title='Users'/>
+            {/*<UncontrolledAccordion title='Menu'/>*/}
+            {/*<UncontrolledAccordion title='Users'/>*/}
             {/*<OnOff isOn={on} onClick={setOn}/>*/}
             {/*<UncontrolledOnOff/>*/}
             {/*<OnOff />*/}

@@ -91,3 +91,4 @@ export const UseEffectDemo2 = {
 export const UseEffectDemo3 = {
     render: () => <SetIntervalExample/>
 }
+
