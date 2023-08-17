@@ -8,6 +8,7 @@ import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRa
 import {UncontrolledOnOff} from "./components/UncontrolledOnOff/UncontrolledOnOff";
 import {ItemType, Select} from "./components/Select/Select";
 import {Clock} from "./components/Clock/Clock";
+import {AnalogClock} from "./components/AnalogClock/AnalogClock";
 
 
 //function declaration
@@ -37,7 +38,8 @@ function App() {
     //обязана вернуть JSX
     return (
         <div className="App">
-            <Clock/>
+            {/*<Clock/>*/}
+            <AnalogClock/>
             {/*<PageTitle title='This is App component'/>*/}
 
             {/*<Select value={selectValue}*/}
