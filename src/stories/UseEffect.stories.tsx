@@ -45,10 +45,13 @@ const SetTimeoutExample = () => {
     const [fake, setFake] = useState(1);
 
     useEffect(() => {
-        setTimeout(() => {
+        const timeoutId = setTimeout(() => {
             console.log('setTimeout')
             document.title = counter.toString()
         }, 1000);
+        return () => {
+            clearTimeout(timeoutId)
+        }
     }, [counter]);
 
     return (
@@ -67,10 +70,14 @@ const SetIntervalExample = () => {
     const [fake, setFake] = useState(1);
 
     useEffect(() => {
-        setInterval(() => {
+        const intervalId = setInterval(() => {
             console.log('tick: ' + counter)
             setCounter((state) => state + 1)
         }, 1000);
+
+        return () => {
+            clearInterval(intervalId)
+        }
     }, []);
 
     return (
@@ -92,3 +99,54 @@ export const UseEffectDemo3 = {
     render: () => <SetIntervalExample/>
 }
 
+const ResetEffectExample = () => {
+    const [counter, setCounter] = useState(1);
+
+    console.log('Component rendered with ' + counter)
+
+    useEffect(() => {
+        console.log('Effect occurred: ' + counter)
+
+        return () => {
+            console.log('RESET EFFECT ' + counter)
+        }
+    }, [counter]);
+
+    return (
+        <>
+            Hello, counter: {counter} <button onClick={() => {setCounter(counter + 1)}}>+</button>
+        </>
+    )
+};
+
+export const UseEffectWithReset = {
+    render: () => <ResetEffectExample/>
+}
+
+const KeysTrackerExample = () => {
+    const [text, setText] = useState('');
+
+    console.log('Component rendered with ' + text)
+
+    useEffect(() => {
+        const handler = (e: KeyboardEvent) => {
+            console.log(e.key);
+            setText(text + e.key)
+        };
+
+        window.document.addEventListener('keypress', handler)
+        return () => {
+            window.document.removeEventListener('keypress',handler)
+        }
+    }, [text]);
+
+    return (
+        <>
+            Typed text: {text}
+        </>
+    )
+};
+
+export const UseEffectWithReset1 = {
+    render: () => <KeysTrackerExample/>
+}
