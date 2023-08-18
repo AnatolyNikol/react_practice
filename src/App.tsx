@@ -39,7 +39,7 @@ function App() {
     return (
         <div className="App">
             {/*<Clock/>*/}
-            <AnalogClock/>
+            {/*<AnalogClock/>*/}
             {/*<PageTitle title='This is App component'/>*/}
 
             {/*<Select value={selectValue}*/}
